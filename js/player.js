@@ -101,7 +101,7 @@ function audioPlay() {
     }
     
     var music = musicList[rem.playlist].item[rem.playid];   // 获取当前播放的歌曲信息
-    var msg = "&nbsp;&nbsp;&nbsp;" + "正在播放: " + music.name + " - " + music.artist;  // 改变浏览器标题
+    var msg = "正在播放: " + music.name + " - " + music.artist + &nbsp;&nbsp;&nbsp;;  // 改变浏览器标题
     
     // 清除定时器
     if (rem.titflash !== undefined ) 
