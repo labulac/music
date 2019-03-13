@@ -32,7 +32,7 @@ function audioErr() {
     // 没播放过，直接跳过
     if(rem.playlist === undefined) return true;
     
-    if(rem.errCount > 10) { // 连续播放失败的歌曲过多
+    if(rem.errCount > 5) { // 连续播放失败的歌曲过多
         layer.msg('似乎出了点问题~播放已停止');
         rem.errCount = 0;
     } else {
@@ -101,7 +101,7 @@ function audioPlay() {
     }
     
     var music = musicList[rem.playlist].item[rem.playid];   // 获取当前播放的歌曲信息
-    var msg = "         正在播放: " + music.name + " - " + music.artist;  // 改变浏览器标题
+    var msg = "&nbsp;&nbsp;&nbsp;" + "正在播放: " + music.name + " - " + music.artist;  // 改变浏览器标题
     
     // 清除定时器
     if (rem.titflash !== undefined ) 
