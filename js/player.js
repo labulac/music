@@ -9,7 +9,7 @@ var mkPlayer = {
     loadcount: 20,  // 搜索结果一次加载多少条
     method: "POST",     // 数据传输方式(POST/GET)
     defaultlist: 3,    // 默认要显示的播放列表编号
-    autoplay: false,    // 是否自动播放(true/false) *此选项在移动端可能无效
+    autoplay: true,    // 是否自动播放(true/false) *此选项在移动端可能无效
     coverbg: true,      // 是否开启封面背景(true/false) *开启后会有些卡
     mcoverbg: false,     // 是否开启[移动端]封面背景(true/false)
     dotshine: true,    // 是否开启播放进度条的小点闪动效果[不支持IE](true/false) *开启后会有些卡
