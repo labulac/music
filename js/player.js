@@ -22,11 +22,7 @@ var mkPlayer = {
 
 
 
-/*******************************************************
- * 以下内容是播放器核心文件，不建议进行修改，否则可能导致播放器无法正常使用!
- * 
- * 哈哈，吓唬你的！想改就改呗！不过建议修改之前先【备份】,要不然改坏了弄不好了。
- ******************************************************/
+
 
 // 存储全局变量
 var rem = [];
@@ -105,7 +101,7 @@ function audioPlay() {
     }
     
     var music = musicList[rem.playlist].item[rem.playid];   // 获取当前播放的歌曲信息
-    var msg = " 正在播放: " + music.name + " - " + music.artist;  // 改变浏览器标题
+    var msg = "正在播放: " + music.name + " - " + music.artist + "       ";  // 改变浏览器标题
     
     // 清除定时器
     if (rem.titflash !== undefined ) 
@@ -337,9 +333,8 @@ function play(music) {
 }
 
 
-// 我的要求并不高，保留这一句版权信息可好？
-// 保留了，你不会损失什么；而保留版权，是对作者最大的尊重。
-console.info('欢迎使用 MKOnlinePlayer!\n当前版本：'+mkPlayer.version+' \n作者：mengkun(https://mkblog.cn)\n歌曲来源于各大音乐平台\nGithub：https://github.com/mengkunsoft/MKOnlineMusicPlayer');
+
+console.info('欢迎使用!\n当前版本：'+mkPlayer.version);
 
 // 音乐进度条拖动回调函数
 function mBcallback(newVal) {
@@ -462,7 +457,7 @@ mkpgb.prototype = {
     }
 };  
 
-// 快捷键切歌，代码来自 @茗血(https://www.52benxi.cn/)
+
 document.onkeydown = function showkey(e) {
     var key = e.keyCode || e.which || e.charCode;
     var ctrl = e.ctrlKey || e.metaKey;
